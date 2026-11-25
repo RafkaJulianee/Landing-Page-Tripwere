@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paket Aktivasi & Setup Awal Sistem Informasi Manajemen Rumah Kos — Rp99.000</title>
-    <meta name="description" content="Paket Aktivasi & Setup Awal Sistem Informasi Manajemen Rumah Kos — Rp99.000 (Sekali Beli). Kami bantu siapkan seluruh fondasi awal agar kos Anda langsung rapi dan siap digunakan pada hari yang sama.">
+    <title>Paket Aktivasi & Template Awal Operasional Rumah Kos — KosinAja</title>
+    <meta name="description" content="Kit Praktis Siap Pakai untuk Merapikan Data Kamar, Booking, Kontrak Digital, dan Penagihan Kos. Standarisasi operasional kos Anda bersama KosinAja.">
 
-    <!-- Google Fonts: Plus Jakarta Sans & Instrument Serif & JetBrains Mono -->
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -19,40 +19,23 @@
                 extend: {
                     fontFamily: {
                         sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
-                        serif: ['"Instrument Serif"', 'Georgia', 'serif'],
                         mono: ['"JetBrains Mono"', 'monospace'],
                     },
                     colors: {
-                        paper: {
-                            50: '#FAF8F5',
-                            100: '#F3EFEA',
-                            200: '#E6E0D6',
-                            300: '#D5CCC0',
+                        lime: {
+                            300: '#C4F54C',
+                            400: '#B8F54A',
+                            500: '#A3E635',
                         },
-                        ink: {
-                            950: '#111613',
-                            900: '#18201C',
-                            700: '#3D4742',
-                            500: '#636E68',
-                            400: '#8A948E',
-                        },
-                        forest: {
-                            900: '#0F291E',
-                            800: '#163829',
-                            700: '#1E4D38',
-                            600: '#266348',
-                            100: '#E3EFE9',
-                            50: '#F2F8F5',
-                        },
-                        terra: {
-                            600: '#C84B24',
-                            500: '#E0582E',
-                            100: '#FCECE6',
+                        dark: {
+                            900: '#111613',
+                            800: '#181E1B',
+                            700: '#232A26',
                         }
                     },
                     boxShadow: {
-                        'editorial': '0 1px 2px rgba(17, 22, 19, 0.04), 0 8px 24px -4px rgba(17, 22, 19, 0.06)',
-                        'window': '0 20px 50px -12px rgba(15, 41, 30, 0.14), 0 0 0 1px rgba(17, 22, 19, 0.08)',
+                        'neo': '3px 4px 0px 0px rgba(18, 22, 25, 1)',
+                        'neo-lg': '6px 8px 0px 0px rgba(18, 22, 25, 1)',
                     }
                 }
             }
@@ -61,947 +44,926 @@
 
     <style>
         body {
-            background-color: #FAF8F5;
-            color: #18201C;
-            font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FFFFFF;
+            color: #121619;
+            -webkit-font-smoothing: antialiased;
         }
-        /* Subtle architectural grid background */
-        .bg-grid-line {
-            background-size: 40px 40px;
-            background-image: 
-                linear-gradient(to right, rgba(24, 32, 28, 0.04) 1px, transparent 1px),
-                linear-gradient(to bottom, rgba(24, 32, 28, 0.04) 1px, transparent 1px);
+
+        /* Print styles for PDF downloading */
+        @media print {
+            header, footer, .no-print, button, #setupModal, #checklistModal {
+                display: none !important;
+            }
+            body {
+                background: white !important;
+                color: black !important;
+            }
+            .page-break {
+                page-break-before: always;
+            }
         }
+
         /* Custom scrollbar */
         ::-webkit-scrollbar {
             width: 8px;
             height: 8px;
         }
         ::-webkit-scrollbar-track {
-            background: #F3EFEA;
+            background: #F4F4F5;
         }
         ::-webkit-scrollbar-thumb {
-            background: #C4BBAF;
+            background: #D4D4D8;
             border-radius: 4px;
         }
         ::-webkit-scrollbar-thumb:hover {
-            background: #9E9488;
+            background: #A1A1AA;
         }
     </style>
 </head>
-<body class="antialiased selection:bg-forest-800 selection:text-white">
+<body class="selection:bg-lime-300 selection:text-neutral-900">
 
-    <!-- MINIMAL EDITORIAL HEADER -->
-    <header class="sticky top-0 z-40 bg-paper-50/90 backdrop-blur-md border-b border-paper-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3 group">
-                <div class="w-8 h-8 rounded-lg bg-forest-900 text-paper-50 flex items-center justify-center font-mono text-xs font-semibold tracking-tighter">
-                    SK
-                </div>
-                <div class="flex flex-col">
-                    <span class="font-bold text-sm tracking-tight text-ink-950 leading-none">Sistem Informasi Manajemen Rumah Kos</span>
-                    <span class="font-mono text-[11px] text-ink-500 mt-0.5">Layanan Onboarding & Setup Awal</span>
-                </div>
+    <!-- NAVBAR (Matches KosinAja brand styling) -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-neutral-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-2.5 group">
+                <svg class="w-6 h-6 text-neutral-900" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0L14.7 9.3L24 12L14.7 14.7L12 24L9.3 14.7L0 12L9.3 9.3L12 0Z" />
+                </svg>
+                <span class="text-xl sm:text-2xl font-extrabold tracking-tight text-neutral-900">KosinAja</span>
             </a>
 
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-ink-700">
-                <a href="#cakupan-setup" class="hover:text-ink-950 transition-colors">Apa yang Anda Dapatkan</a>
-                <a href="#pratinjau-sistem" class="hover:text-ink-950 transition-colors">Pratinjau Sistem</a>
-                <a href="#mengapa-paket-ini" class="hover:text-ink-950 transition-colors">Mengapa Paket Ini</a>
-            </div>
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-[15px] font-semibold text-neutral-700">
+                <a href="#kenapa-terstruktur" class="hover:text-neutral-950 transition-colors">Kenapa Terstruktur</a>
+                <a href="#template-kamar" class="hover:text-neutral-950 transition-colors">Template Kamar</a>
+                <a href="#sop-kontrak" class="hover:text-neutral-950 transition-colors">SOP & Kontrak</a>
+                <a href="#penagihan-pengaduan" class="hover:text-neutral-950 transition-colors">Penagihan & Aduan</a>
+                <a href="#langkah-selanjutnya" class="hover:text-neutral-950 transition-colors">Langkah Selanjutnya</a>
+            </nav>
 
+            <!-- CTA Button -->
             <div class="flex items-center gap-3">
-                <a href="https://wa.me/6285871444639?text=Halo%2C%20saya%20ingin%20memesan%20Paket%20Aktivasi%20%26%20Setup%20Awal%20Sistem%20Informasi%20Manajemen%20Rumah%20Kos%20%E2%80%94%20Rp99.000%20(Sekali%20Beli)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-forest-900 hover:bg-forest-800 text-paper-50 text-xs sm:text-sm font-semibold px-4 py-2.5 rounded-lg transition-colors">
-                    <span>Setup Kos Saya</span>
-                    <span class="font-mono text-xs text-paper-200 border-l border-paper-50/20 pl-2">Rp99.000</span>
-                </a>
+                <button onclick="window.print()" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl border-2 border-neutral-900 bg-white hover:bg-neutral-900 hover:text-white text-neutral-900 font-bold text-sm transition-all">
+                    Baca Panduan Lengkap
+                </button>
+                <button onclick="openChecklistModal()" class="md:hidden p-2 rounded-lg border border-neutral-300 text-neutral-700">
+                    <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- HERO SECTION -->
-    <section class="relative bg-grid-line border-b border-paper-200 pt-10 pb-16 sm:pt-16 sm:pb-24">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Top Tagline / Offer Metadata -->
-            <div class="inline-flex flex-wrap items-center gap-2 px-3 py-1.5 rounded-md bg-paper-100 border border-paper-200 text-ink-700 text-xs font-medium mb-6">
-                <span class="w-2 h-2 rounded-full bg-forest-700"></span>
-                <span class="font-semibold text-ink-950">Paket Aktivasi & Setup Awal Sistem Informasi Manajemen Rumah Kos</span>
-                <span class="text-ink-400">—</span>
-                <span class="font-mono font-semibold text-forest-800 bg-forest-100 px-2 py-0.5 rounded">Rp99.000 (Sekali Beli)</span>
-            </div>
+    <main>
+        <!-- HERO SECTION (Identical design composition to the reference image) -->
+        <section class="relative bg-white pt-10 pb-16 lg:pt-16 lg:pb-24 overflow-hidden border-b border-neutral-100">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+                    
+                    <!-- Left Hero Copy -->
+                    <div class="lg:col-span-7">
+                        <h1 class="text-4xl sm:text-5xl lg:text-[54px] font-extrabold text-neutral-900 tracking-tight leading-[1.12]">
+                            Paket Aktivasi & Template Awal Operasional Rumah Kos
+                        </h1>
 
-            <!-- Main Headline (Exact Material) -->
-            <div class="max-w-4xl">
-                <h1 class="text-3xl sm:text-5xl lg:text-[54px] font-extrabold text-ink-950 tracking-tight leading-[1.12] mb-6">
-                    Siap Mengelola Rumah Kos Lebih Rapi <span class="font-serif italic font-normal text-forest-800">Tanpa Ribet Setup dari Nol?</span>
-                </h1>
-
-                <!-- Body Copy (Exact Material) -->
-                <p class="text-base sm:text-lg lg:text-xl text-ink-700 leading-relaxed max-w-3xl mb-9">
-                    Membaca panduan pengelolaan kos modern saja belum cukup jika Anda masih menunda memindahkan catatan kamar, data penghuni, dan jadwal tagihan dari buku tulis atau WhatsApp ke sistem digital. Melalui paket aktivasi awal ini, kami bantu menyiapkan seluruh fondasi awal di website <strong class="font-semibold text-ink-950">Sistem Informasi Manajemen Rumah Kos</strong> agar Anda bisa langsung fokus menerima penghuni dan memantau pemasukan dengan tenang.
-                </p>
-
-                <!-- Primary CTA Area -->
-                <div class="flex flex-col sm:flex-row sm:items-center gap-4 mb-14">
-                    <a href="https://wa.me/6285871444639?text=Halo%2C%20saya%20ingin%20memesan%20Paket%20Aktivasi%20%26%20Setup%20Awal%20Sistem%20Informasi%20Manajemen%20Rumah%20Kos%20%E2%80%94%20Rp99.000%20(Sekali%20Beli)." target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-3 bg-forest-900 hover:bg-forest-800 text-white font-semibold text-sm sm:text-base px-7 py-4 rounded-xl shadow-editorial transition-all">
-                        <span>Aktifkan & Setup Kos Saya Sekarang — Rp99.000</span>
-                        <svg class="w-4 h-4 text-paper-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                        </svg>
-                    </a>
-                    <div class="flex items-center gap-2 text-xs sm:text-sm text-ink-500 px-1">
-                        <svg class="w-4 h-4 text-forest-700 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span>Investasi Sekali Beli • Tanpa biaya tersembunyi, langsung siap pakai</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- VISUAL BRIDGE: FROM NOTEBOOK/WA TO STRUCTURED SYSTEM -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
-                
-                <!-- Left Card: What You Send Us (Buku Tulis / WA) -->
-                <div class="lg:col-span-4 bg-paper-100/90 rounded-2xl p-6 border border-paper-200 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between text-xs font-mono text-ink-500 pb-4 mb-4 border-b border-paper-200">
-                            <span>01 / DATA DARI ANDA</span>
-                            <span class="px-2 py-0.5 bg-paper-200/70 text-ink-700 rounded">Buku Tulis / WhatsApp</span>
-                        </div>
-                        <p class="text-sm font-semibold text-ink-950 mb-3">
-                            Anda cukup kirimkan catatan yang ada saat ini:
+                        <p class="text-base sm:text-lg text-neutral-600 leading-relaxed max-w-xl mt-6">
+                            Kit Praktis Siap Pakai untuk Merapikan Data Kamar, Booking, Kontrak Digital, dan Penagihan Kos dalam Satu Alur Terintegrasi.
                         </p>
-                        <!-- Simulated Raw Note / WhatsApp List -->
-                        <div class="bg-white rounded-xl p-4 border border-paper-200 font-mono text-xs text-ink-700 space-y-2 shadow-sm">
-                            <div class="text-[11px] text-ink-400 border-b border-paper-100 pb-1.5 mb-2 flex justify-between">
-                                <span>Catatan_Kamar_Kos.txt</span>
-                                <span>Mentah</span>
-                            </div>
-                            <p class="leading-relaxed">
-                                • Kmr 101 - Rian (AC) 1.5jt masuk tgl 5<br>
-                                • Kmr 102 - Bagus (AC) 1.5jt lunas<br>
-                                • Kmr 103 - Dina 1.35jt jatuh tempo tgl 18<br>
-                                • Kmr 104 - Kosong (Non-AC 1.1jt)<br>
-                                • Kmr 201 - Farhan 1.5jt belum bayar bln ini
-                            </p>
+
+                        <!-- Action Buttons (Matches the image buttons) -->
+                        <div class="flex flex-wrap items-center gap-4 mt-8">
+                            <button onclick="window.print()" class="inline-flex items-center justify-center px-7 py-3.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 text-white font-bold text-sm sm:text-base shadow-sm transition-all gap-2">
+                                <svg class="w-4 h-4 text-lime-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                                </svg>
+                                <span>Unduh Panduan (PDF)</span>
+                            </button>
+
+                            <button onclick="openChecklistModal()" class="inline-flex items-center justify-center px-7 py-3.5 rounded-xl border-2 border-neutral-900 bg-white hover:bg-neutral-50 text-neutral-900 font-bold text-sm sm:text-base transition-all">
+                                Isi Checklist Kesiapan Kos
+                            </button>
                         </div>
                     </div>
 
-                    <div class="mt-6 pt-4 border-t border-paper-200 flex items-center justify-between text-xs text-ink-500">
-                        <span>Tidak perlu mengetik ulang di form rumit</span>
-                        <span class="font-mono text-forest-800 font-semibold">Kami proses &rarr;</span>
+                    <!-- Right Illustration (Clean vector reconstruction matching the reference image) -->
+                    <div class="lg:col-span-5 flex justify-center lg:justify-end">
+                        <div class="relative w-full max-w-[420px] aspect-square flex items-center justify-center">
+                            
+                            <!-- Dashed elliptical orbit ring -->
+                            <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 420 420" fill="none">
+                                <ellipse cx="210" cy="210" rx="195" ry="78" transform="rotate(-15 210 210)" stroke="#18181B" stroke-width="1.8" stroke-dasharray="4 4" opacity="0.85" />
+                            </svg>
+
+                            <!-- Top-right dark badge with 3 lime horizontal lines (menu icon) -->
+                            <div class="absolute top-10 right-4 w-12 h-12 rounded-full bg-neutral-900 border-2 border-neutral-900 flex flex-col items-center justify-center gap-1 shadow-sm z-20">
+                                <span class="w-4 h-0.5 bg-lime-400 rounded-full"></span>
+                                <span class="w-4 h-0.5 bg-lime-400 rounded-full"></span>
+                                <span class="w-4 h-0.5 bg-lime-400 rounded-full"></span>
+                            </div>
+
+                            <!-- Right-upper lime checkmark badge -->
+                            <div class="absolute top-28 right-0 w-11 h-11 rounded-full bg-lime-400 border-2 border-neutral-900 flex items-center justify-center z-20 shadow-sm">
+                                <svg class="w-5 h-5 text-neutral-900 stroke-[3]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+
+                            <!-- Middle-right dark exclamation badge -->
+                            <div class="absolute bottom-28 right-2 w-10 h-10 rounded-full bg-neutral-900 border-2 border-neutral-900 flex items-center justify-center text-white font-extrabold text-base z-20 shadow-sm">
+                                !
+                            </div>
+
+                            <!-- Bottom-right lime checkmark badge -->
+                            <div class="absolute bottom-10 right-14 w-11 h-11 rounded-full bg-lime-400 border-2 border-neutral-900 flex items-center justify-center z-20 shadow-sm">
+                                <svg class="w-5 h-5 text-neutral-900 stroke-[3]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+
+                            <!-- Small floating lime dot -->
+                            <div class="absolute bottom-20 right-28 w-3 h-3 rounded-full bg-lime-400 border border-neutral-900 z-10"></div>
+
+                            <!-- Floating black sparkles on left and bottom left -->
+                            <div class="absolute top-20 left-10 text-neutral-900 text-xl font-bold">
+                                ✦
+                            </div>
+                            <div class="absolute bottom-14 left-8 text-neutral-900 text-2xl font-bold">
+                                ✦
+                            </div>
+
+                            <!-- Main Device / Card Container -->
+                            <div class="relative w-[270px] sm:w-[290px] rounded-[32px] border-[3px] border-neutral-900 bg-white overflow-hidden shadow-neo-lg z-10">
+                                <!-- Device Header (Lime Green with dots) -->
+                                <div class="bg-lime-400 px-5 pt-3.5 pb-4 border-b-2 border-neutral-900">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <span class="w-2.5 h-2.5 rounded-full bg-neutral-900"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-neutral-900"></span>
+                                        <span class="w-2.5 h-2.5 rounded-full bg-neutral-900"></span>
+                                    </div>
+                                    <!-- Two cards inside lime header -->
+                                    <div class="grid grid-cols-2 gap-2.5">
+                                        <!-- Left white card -->
+                                        <div class="bg-white rounded-xl border-2 border-neutral-900 p-2.5 flex flex-col justify-center gap-1.5 h-14">
+                                            <div class="w-7 h-1.5 bg-neutral-900 rounded-full"></div>
+                                            <div class="w-12 h-1 bg-neutral-400 rounded-full"></div>
+                                        </div>
+                                        <!-- Right black card -->
+                                        <div class="bg-neutral-900 rounded-xl border-2 border-neutral-900 p-2.5 flex flex-col justify-center gap-1.5 h-14">
+                                            <div class="w-7 h-1.5 bg-lime-400 rounded-full"></div>
+                                            <div class="w-10 h-1 bg-neutral-600 rounded-full"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Device Body (White area with wide lime check card) -->
+                                <div class="p-4 bg-white">
+                                    <div class="bg-lime-400 rounded-2xl border-2 border-neutral-900 p-3.5 flex items-center gap-3">
+                                        <div class="w-7 h-7 rounded-full bg-neutral-900 flex items-center justify-center shrink-0">
+                                            <svg class="w-4 h-4 text-lime-400 stroke-[3]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                            </svg>
+                                        </div>
+                                        <div class="space-y-1">
+                                            <div class="w-20 h-1.5 bg-neutral-900 rounded-full"></div>
+                                            <div class="w-14 h-1 bg-neutral-800 rounded-full opacity-60"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- BAGIAN 1: ISI PAKET STARTER ANDA -->
+        <section id="kenapa-terstruktur" class="py-16 sm:py-20 bg-neutral-50/60 border-b border-neutral-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="max-w-3xl mb-12">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lime-400 border border-neutral-900 text-xs font-bold text-neutral-900 mb-4">
+                        <span>✦ BAGIAN 1</span>
+                        <span>•</span>
+                        <span>FONDASI DATA AWAL</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
+                        Bagian 1: Isi Paket Starter Anda
+                    </h2>
+                    <p class="text-base sm:text-lg text-neutral-700 leading-relaxed mt-4">
+                        Paket ini dirancang khusus bagi pemilik dan pengelola kos yang ingin langsung menata seluruh data operasionalnya secara rapi sebelum atau saat mengaktifkan sistem manajemen rumah kos. Dengan template starter ini, Anda dapat membakukan standar pelayanan, mempercepat proses administrasi harian, serta menyiapkan fondasi data yang matang untuk digitalisasi penuh.
+                    </p>
+                </div>
+
+                <!-- 3 Key Value Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-2xl p-7 border-2 border-neutral-900 shadow-neo transition-transform hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-lime-400 border-2 border-neutral-900 flex items-center justify-center font-mono font-bold text-lg mb-5">
+                            01
+                        </div>
+                        <h3 class="text-xl font-bold text-neutral-900 mb-2">Membakukan Standar Pelayanan</h3>
+                        <p class="text-sm text-neutral-600 leading-relaxed">
+                            Menciptakan aturan yang seragam dan transparan bagi seluruh penghuni, mencegah kesalahpahaman, serta menaikkan kelas kos Anda.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-7 border-2 border-neutral-900 shadow-neo transition-transform hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-neutral-900 text-lime-400 border-2 border-neutral-900 flex items-center justify-center font-mono font-bold text-lg mb-5">
+                            02
+                        </div>
+                        <h3 class="text-xl font-bold text-neutral-900 mb-2">Mempercepat Administrasi Harian</h3>
+                        <p class="text-sm text-neutral-600 leading-relaxed">
+                            Tidak perlu lagi rekap catatan manual atau mencari dokumen kontrak sewa yang terselip saat ada pergantian atau penagihan kamar.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-7 border-2 border-neutral-900 shadow-neo transition-transform hover:-translate-y-1">
+                        <div class="w-12 h-12 rounded-xl bg-lime-400 border-2 border-neutral-900 flex items-center justify-center font-mono font-bold text-lg mb-5">
+                            03
+                        </div>
+                        <h3 class="text-xl font-bold text-neutral-900 mb-2">Fondasi Digitalisasi Penuh</h3>
+                        <p class="text-sm text-neutral-600 leading-relaxed">
+                            Format data yang telah terstruktur rapi memudahkan integrasi langsung ke sistem aplikasi kos modern tanpa perlu input ulang dari nol.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Right Card: What We Set Up For You (Live System UI) -->
-                <div class="lg:col-span-8 bg-white rounded-2xl border border-paper-200 shadow-window overflow-hidden flex flex-col justify-between">
-                    <!-- Top Window Bar -->
-                    <div class="bg-ink-950 text-paper-100 px-5 py-3 flex flex-wrap items-center justify-between gap-2 text-xs">
-                        <div class="flex items-center gap-2">
-                            <span class="w-2.5 h-2.5 rounded-full bg-paper-300/30"></span>
-                            <span class="w-2.5 h-2.5 rounded-full bg-paper-300/30"></span>
-                            <span class="w-2.5 h-2.5 rounded-full bg-forest-600"></span>
-                            <span class="font-mono text-[11px] text-paper-200 ml-2">Workspace Admin Kos — Ruang Data Terisolasi</span>
-                        </div>
-                        <div class="flex items-center gap-2 font-mono text-[11px]">
-                            <span class="px-2 py-0.5 rounded bg-forest-800 text-emerald-300 border border-forest-600">Status: Siap Dipantau</span>
-                        </div>
+            </div>
+        </section>
+
+        <!-- BAGIAN 2: TEMPLATE 1 — DAFTAR KAMAR, FASILITAS & PERATURAN KOS -->
+        <section id="template-kamar" class="py-16 sm:py-24 bg-white border-b border-neutral-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="max-w-3xl mb-12">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lime-400 border border-neutral-900 text-xs font-bold text-neutral-900 mb-4">
+                        <span>✦ BAGIAN 2</span>
+                        <span>•</span>
+                        <span>TEMPLATE 1</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
+                        Bagian 2: Template 1 — Daftar Kamar, Fasilitas & Peraturan Kos
+                    </h2>
+                    <p class="text-neutral-600 text-base mt-2">
+                        Standar inventaris kamar, spesifikasi fasilitas, tarif bulanan, dan pedoman tata tertib hunian.
+                    </p>
+                </div>
+
+                <!-- Structured Table (Exact content from PDF) -->
+                <div class="bg-white rounded-2xl border-2 border-neutral-900 shadow-neo overflow-hidden mb-12">
+                    <div class="bg-neutral-900 px-6 py-4 flex items-center justify-between">
+                        <span class="font-mono text-xs font-bold uppercase tracking-wider text-lime-400">Daftar Kamar & Fasilitas Kos</span>
+                        <span class="text-xs text-neutral-300">Format Starter Siap Pakai</span>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="border-b-2 border-neutral-900 bg-neutral-50 text-xs font-mono font-bold uppercase text-neutral-800">
+                                    <th class="py-3.5 px-6">Kode Kamar</th>
+                                    <th class="py-3.5 px-6">Tipe & Fasilitas</th>
+                                    <th class="py-3.5 px-6">Harga Sewa / Bulan</th>
+                                    <th class="py-3.5 px-6">Status Hunian</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y border-b border-neutral-200 text-sm">
+                                <tr class="hover:bg-neutral-50/80 transition-colors">
+                                    <td class="py-4 px-6 font-mono font-bold text-neutral-900">K-01</td>
+                                    <td class="py-4 px-6 text-neutral-800 font-medium">
+                                        Deluxe <span class="text-neutral-500 font-normal">(AC, Kamar Mandi Dalam, Kasur Queen, Meja Kerja)</span>
+                                    </td>
+                                    <td class="py-4 px-6 font-mono font-semibold text-neutral-900">Rp1.800.000</td>
+                                    <td class="py-4 px-6">
+                                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-lime-400 text-neutral-900 border border-neutral-900">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-neutral-900"></span>
+                                            Terisi
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-neutral-50/80 transition-colors">
+                                    <td class="py-4 px-6 font-mono font-bold text-neutral-900">K-02</td>
+                                    <td class="py-4 px-6 text-neutral-800 font-medium">
+                                        Standard <span class="text-neutral-500 font-normal">(Kipas Angin, Kamar Mandi Luar, Kasur Single)</span>
+                                    </td>
+                                    <td class="py-4 px-6 font-mono font-semibold text-neutral-900">Rp1.000.000</td>
+                                    <td class="py-4 px-6">
+                                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-neutral-100 text-neutral-700 border border-neutral-300">
+                                            <span class="w-1.5 h-1.5 rounded-full bg-neutral-400"></span>
+                                            Kosong
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Contoh Peraturan Kos Standar (Exact content from PDF) -->
+                <div class="bg-neutral-50 rounded-2xl p-6 sm:p-8 border-2 border-neutral-900 shadow-neo">
+                    <div class="flex items-center gap-2.5 mb-6">
+                        <span class="w-3 h-3 rounded-full bg-neutral-900"></span>
+                        <h3 class="text-xl sm:text-2xl font-bold text-neutral-900">Contoh Peraturan Kos Standar</h3>
                     </div>
 
-                    <!-- Workspace Content -->
-                    <div class="p-5 sm:p-6">
-                        <div class="flex flex-wrap items-center justify-between gap-4 pb-5 mb-5 border-b border-paper-200">
-                            <div>
-                                <div class="text-xs font-mono text-ink-500 uppercase">Fondasi Awal Terkonfigurasi</div>
-                                <div class="text-lg font-bold text-ink-950">Ringkasan Hunian, Kontrak Sewa & Tagihan</div>
-                            </div>
-                            <div class="flex items-center gap-3 text-xs font-mono">
-                                <div class="px-3 py-1.5 rounded-lg bg-paper-50 border border-paper-200">
-                                    <span class="text-ink-500">Terisi:</span> <strong class="text-ink-950">4/5 Kamar</strong>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        
+                        <!-- Poin 1 -->
+                        <div class="bg-white rounded-xl p-5 border border-neutral-200">
+                            <div class="flex items-start gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-lime-400 border border-neutral-900 flex items-center justify-center shrink-0 mt-0.5">
+                                    <span class="text-xs font-bold text-neutral-900">1</span>
                                 </div>
-                                <div class="px-3 py-1.5 rounded-lg bg-forest-50 border border-forest-100 text-forest-900">
-                                    <span>Akses Penghuni:</span> <strong>Aktif</strong>
+                                <div>
+                                    <h4 class="font-bold text-neutral-900 text-sm sm:text-base mb-1.5">Jam Berkunjung & Tamu</h4>
+                                    <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                                        Tamu maksimal berkunjung hingga pukul 22.00 WIB dan wajib melapor ke pengelola atau mencatat di buku tamu. Tamu lawan jenis dilarang masuk ke dalam kamar privat.
+                                    </p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Clean Structured Table -->
+                        <!-- Poin 2 -->
+                        <div class="bg-white rounded-xl p-5 border border-neutral-200">
+                            <div class="flex items-start gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-lime-400 border border-neutral-900 flex items-center justify-center shrink-0 mt-0.5">
+                                    <span class="text-xs font-bold text-neutral-900">2</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-neutral-900 text-sm sm:text-base mb-1.5">Kebersihan Area Bersama</h4>
+                                    <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                                        Seluruh penghuni wajib menjaga kebersihan dapur, area jemur, dan ruang santai bersama. Sampah pribadi harus dibuang pada tempat sampah utama yang disediakan.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Poin 3 -->
+                        <div class="bg-white rounded-xl p-5 border border-neutral-200">
+                            <div class="flex items-start gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-lime-400 border border-neutral-900 flex items-center justify-center shrink-0 mt-0.5">
+                                    <span class="text-xs font-bold text-neutral-900">3</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-neutral-900 text-sm sm:text-base mb-1.5">Pembayaran Tepat Waktu</h4>
+                                    <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                                        Pembayaran sewa bulanan wajib dilakukan paling lambat pada tanggal jatuh tempo sesuai kesepakatan kontrak sewa.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Poin 4 -->
+                        <div class="bg-white rounded-xl p-5 border border-neutral-200">
+                            <div class="flex items-start gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-lime-400 border border-neutral-900 flex items-center justify-center shrink-0 mt-0.5">
+                                    <span class="text-xs font-bold text-neutral-900">4</span>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-neutral-900 text-sm sm:text-base mb-1.5">Kenyamanan & Kebijakan Khusus</h4>
+                                    <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                                        Dilarang membawa hewan peliharaan, merokok di dalam kamar ber-AC, serta membuat kegaduhan yang mengganggu penghuni lain.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BAGIAN 3: TEMPLATE 2 — SOP PERSETUJUAN BOOKING & FORMAT KONTRAK SEWA DIGITAL -->
+        <section id="sop-kontrak" class="py-16 sm:py-24 bg-neutral-50/60 border-b border-neutral-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="max-w-3xl mb-12">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lime-400 border border-neutral-900 text-xs font-bold text-neutral-900 mb-4">
+                        <span>✦ BAGIAN 3</span>
+                        <span>•</span>
+                        <span>TEMPLATE 2</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
+                        Bagian 3: Template 2 — SOP Persetujuan Booking & Format Kontrak Sewa Digital
+                    </h2>
+                    <p class="text-neutral-600 text-base mt-2">
+                        Alur persetujuan sewa sistematis dan klausul hukum standar untuk menjamin kepastian kedua belah pihak.
+                    </p>
+                </div>
+
+                <!-- 1. Alur Singkat Persetujuan Booking -->
+                <div class="mb-14">
+                    <h3 class="text-xl sm:text-2xl font-bold text-neutral-900 mb-6 flex items-center gap-2.5">
+                        <span class="font-mono text-sm px-2.5 py-1 rounded bg-neutral-900 text-white">01</span>
+                        <span>1. Alur Singkat Persetujuan Booking</span>
+                    </h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+                        <!-- Step 1 -->
+                        <div class="bg-white rounded-2xl p-6 border-2 border-neutral-900 shadow-neo flex flex-col justify-between">
+                            <div>
+                                <div class="w-10 h-10 rounded-xl bg-lime-400 border border-neutral-900 flex items-center justify-center font-mono font-bold text-base mb-4">
+                                    1
+                                </div>
+                                <h4 class="text-lg font-bold text-neutral-900 mb-2">Pengajuan Sewa</h4>
+                                <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                                    Calon penghuni mengajukan sewa kamar secara online/offline dan melengkapi pembuatan akun profil penghuni.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-neutral-100 font-mono text-[11px] text-neutral-400">
+                                Langkah #1 • Form Identitas
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="bg-white rounded-2xl p-6 border-2 border-neutral-900 shadow-neo flex flex-col justify-between">
+                            <div>
+                                <div class="w-10 h-10 rounded-xl bg-neutral-900 text-white border border-neutral-900 flex items-center justify-center font-mono font-bold text-base mb-4">
+                                    2
+                                </div>
+                                <h4 class="text-lg font-bold text-neutral-900 mb-2">Verifikasi Admin</h4>
+                                <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                                    Admin Kos mengecek ketersediaan kamar, melakukan verifikasi data calon penghuni, lalu menyetujui atau menolak permohonan booking.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-neutral-100 font-mono text-[11px] text-neutral-400">
+                                Langkah #2 • Validasi & Approval
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="bg-white rounded-2xl p-6 border-2 border-neutral-900 shadow-neo flex flex-col justify-between">
+                            <div>
+                                <div class="w-10 h-10 rounded-xl bg-lime-400 border border-neutral-900 flex items-center justify-center font-mono font-bold text-base mb-4">
+                                    3
+                                </div>
+                                <h4 class="text-lg font-bold text-neutral-900 mb-2">Penerbitan Kontrak</h4>
+                                <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                                    Jika booking disetujui, data penghuni secara otomatis dicatat ke database dan dokumen kontrak sewa digital diterbitkan untuk ditandatangani.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-neutral-100 font-mono text-[11px] text-neutral-400">
+                                Langkah #3 • Kontrak Digital Terbit
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Kerangka Kontrak Sewa Digital -->
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-neutral-900 mb-6 flex items-center gap-2.5">
+                        <span class="font-mono text-sm px-2.5 py-1 rounded bg-neutral-900 text-white">02</span>
+                        <span>2. Kerangka Kontrak Sewa Digital</span>
+                    </h3>
+
+                    <div class="bg-white rounded-2xl border-2 border-neutral-900 shadow-neo p-6 sm:p-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            
+                            <!-- Klausul 1 -->
+                            <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200">
+                                <span class="font-mono text-xs font-bold text-neutral-900 uppercase block mb-1">Klausul 01</span>
+                                <h4 class="font-bold text-neutral-900 text-base mb-1.5">Identitas Para Pihak</h4>
+                                <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                                    Data lengkap Pengelola Kos (Pihak Pertama) dan Penghuni Kos (Pihak Kedua) mencakup Nama, NIK/KTP, Nomor Telepon, dan Kontak Darurat.
+                                </p>
+                            </div>
+
+                            <!-- Klausul 2 -->
+                            <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200">
+                                <span class="font-mono text-xs font-bold text-neutral-900 uppercase block mb-1">Klausul 02</span>
+                                <h4 class="font-bold text-neutral-900 text-base mb-1.5">Detail Kamar & Durasi Sewa</h4>
+                                <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                                    Spesifikasi Nomor/Kode Kamar yang disewa, Tanggal Mulai Masuk (Check-in), serta Masa Berlaku Sewa (Bulanan/Tahunan).
+                                </p>
+                            </div>
+
+                            <!-- Klausul 3 -->
+                            <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200">
+                                <span class="font-mono text-xs font-bold text-neutral-900 uppercase block mb-1">Klausul 03</span>
+                                <h4 class="font-bold text-neutral-900 text-base mb-1.5">Ketentuan Keuangan</h4>
+                                <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                                    Nominal sewa bulanan, besaran deposit awal, batas tanggal jatuh tempo pembayaran setiap bulan, dan metode pembayaran resmi.
+                                </p>
+                            </div>
+
+                            <!-- Klausul 4 -->
+                            <div class="p-4 rounded-xl bg-neutral-50 border border-neutral-200">
+                                <span class="font-mono text-xs font-bold text-neutral-900 uppercase block mb-1">Klausul 04</span>
+                                <h4 class="font-bold text-neutral-900 text-base mb-1.5">Hak & Kewajiban Penghuni</h4>
+                                <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                                    Hak menikmati fasilitas sesuai standar dan kewajiban mematuhi seluruh tata tertib serta Peraturan Kos yang berlaku.
+                                </p>
+                            </div>
+
+                            <!-- Klausul 5 -->
+                            <div class="md:col-span-2 p-4 rounded-xl bg-neutral-50 border border-neutral-200">
+                                <span class="font-mono text-xs font-bold text-neutral-900 uppercase block mb-1">Klausul 05</span>
+                                <h4 class="font-bold text-neutral-900 text-base mb-1.5">Ketentuan Perpanjangan, Pengakhiran & Deposit</h4>
+                                <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                                    Prosedur pemberitahuan sebelum perpanjangan/pengakhiran sewa, syarat pengembalian uang deposit, serta sanksi atas pembatalan sepihak.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- BAGIAN 4: TEMPLATE 3 — JADWAL PENAGIHAN & ALUR PENANGANAN PENGADUAN -->
+        <section id="penagihan-pengaduan" class="py-16 sm:py-24 bg-white border-b border-neutral-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <div class="max-w-3xl mb-12">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lime-400 border border-neutral-900 text-xs font-bold text-neutral-900 mb-4">
+                        <span>✦ BAGIAN 4</span>
+                        <span>•</span>
+                        <span>TEMPLATE 3</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">
+                        Bagian 4: Template 3 — Jadwal Penagihan & Alur Penanganan Pengaduan
+                    </h2>
+                    <p class="text-neutral-600 text-base mt-2">
+                        Standar siklus penagihan bulanan tepat waktu dan formulir rekapan tiket komplain fasilitas kamar.
+                    </p>
+                </div>
+
+                <!-- 1. Alur Penagihan Bulanan -->
+                <div class="mb-14">
+                    <h3 class="text-xl sm:text-2xl font-bold text-neutral-900 mb-6 flex items-center gap-2.5">
+                        <span class="font-mono text-sm px-2.5 py-1 rounded bg-neutral-900 text-white">01</span>
+                        <span>1. Alur Penagihan Bulanan</span>
+                    </h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        
+                        <!-- Penagihan 1 -->
+                        <div class="p-6 rounded-2xl bg-neutral-50 border-2 border-neutral-900 shadow-neo flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono text-xs font-bold text-neutral-500 uppercase block mb-2">H-3 Jatuh Tempo</span>
+                                <h4 class="text-lg font-bold text-neutral-900 mb-2">Notifikasi Tagihan</h4>
+                                <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                                    Kirimkan notifikasi pengingat tagihan otomatis atau pesan pengingat kepada penghuni pada H-3 sebelum tanggal jatuh tempo.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-neutral-200 flex items-center gap-2 text-xs font-semibold text-neutral-800">
+                                <span class="w-2 h-2 rounded-full bg-lime-500"></span> Pengingat Terjadwal
+                            </div>
+                        </div>
+
+                        <!-- Penagihan 2 -->
+                        <div class="p-6 rounded-2xl bg-neutral-50 border-2 border-neutral-900 shadow-neo flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono text-xs font-bold text-neutral-500 uppercase block mb-2">Kanal Resmi</span>
+                                <h4 class="text-lg font-bold text-neutral-900 mb-2">Pembayaran Penghuni</h4>
+                                <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                                    Penghuni melakukan pembayaran sewa sesuai nominal tagihan melalui kanal pembayaran resmi dan mengunggah buktinya.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-neutral-200 flex items-center gap-2 text-xs font-semibold text-neutral-800">
+                                <span class="w-2 h-2 rounded-full bg-neutral-900"></span> Bukti Transfer / Online
+                            </div>
+                        </div>
+
+                        <!-- Penagihan 3 -->
+                        <div class="p-6 rounded-2xl bg-neutral-50 border-2 border-neutral-900 shadow-neo flex flex-col justify-between">
+                            <div>
+                                <span class="font-mono text-xs font-bold text-neutral-500 uppercase block mb-2">Resi & Rekap</span>
+                                <h4 class="text-lg font-bold text-neutral-900 mb-2">Verifikasi & Pencatatan</h4>
+                                <p class="text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                                    Admin Kos memverifikasi pembayaran masuk, menerbitkan resi digital, serta mencatat transaksi ke dalam riwayat pembayaran dan laporan keuangan operasional.
+                                </p>
+                            </div>
+                            <div class="mt-4 pt-3 border-t border-neutral-200 flex items-center gap-2 text-xs font-semibold text-neutral-800">
+                                <span class="w-2 h-2 rounded-full bg-lime-500"></span> Resi Otomatis
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- 2. Format Pencatatan Pengaduan Kerusakan (Exact table from PDF) -->
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-neutral-900 mb-6 flex items-center gap-2.5">
+                        <span class="font-mono text-sm px-2.5 py-1 rounded bg-neutral-900 text-white">02</span>
+                        <span>2. Format Pencatatan Pengaduan Kerusakan</span>
+                    </h3>
+
+                    <div class="bg-white rounded-2xl border-2 border-neutral-900 shadow-neo overflow-hidden">
+                        <div class="bg-neutral-900 px-6 py-4 flex items-center justify-between">
+                            <span class="font-mono text-xs font-bold uppercase tracking-wider text-lime-400">Rekap Laporan Tiket Pengaduan Kerusakan</span>
+                            <span class="text-xs text-neutral-300">Format Standard Template</span>
+                        </div>
                         <div class="overflow-x-auto">
                             <table class="w-full text-left border-collapse">
                                 <thead>
-                                    <tr class="border-b border-paper-200 text-[11px] font-mono uppercase text-ink-500">
-                                        <th class="py-2.5 pr-4">Kamar & Tipe</th>
-                                        <th class="py-2.5 px-4">Penghuni Aktif</th>
-                                        <th class="py-2.5 px-4">Tarif & Siklus</th>
-                                        <th class="py-2.5 px-4">Kontrak & Tagihan</th>
-                                        <th class="py-2.5 pl-4 text-right">Akses Mandiri</th>
+                                    <tr class="border-b-2 border-neutral-900 bg-neutral-50 text-xs font-mono font-bold uppercase text-neutral-800">
+                                        <th class="py-3.5 px-6">Tanggal</th>
+                                        <th class="py-3.5 px-6">Nomor Kamar</th>
+                                        <th class="py-3.5 px-6">Keluhan / Kerusakan</th>
+                                        <th class="py-3.5 px-6">Status Tindak Lanjut</th>
                                     </tr>
                                 </thead>
-                                <tbody class="divide-y divide-paper-100 text-xs sm:text-sm">
-                                    <tr>
-                                        <td class="py-3 pr-4 font-mono font-semibold text-ink-950">Kamar 101 <span class="text-xs font-sans font-normal text-ink-500 block">AC Eksklusif</span></td>
-                                        <td class="py-3 px-4 font-medium text-ink-900">Rian Pratama</td>
-                                        <td class="py-3 px-4 font-mono text-xs text-ink-700">Rp1.500.000 / bln</td>
-                                        <td class="py-3 px-4">
-                                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-medium bg-forest-50 text-forest-800 border border-forest-100">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-forest-700"></span> Lunas (Jatuh Tempo Tgl 5)
+                                <tbody class="divide-y border-b border-neutral-200 text-sm">
+                                    <tr class="hover:bg-neutral-50 transition-colors">
+                                        <td class="py-4 px-6 font-mono text-neutral-800 font-semibold">10/10/2024</td>
+                                        <td class="py-4 px-6 font-mono font-bold text-neutral-900">K-01</td>
+                                        <td class="py-4 px-6 text-neutral-800">
+                                            AC kurang dingin dan meneteskan air
+                                        </td>
+                                        <td class="py-4 px-6">
+                                            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-lime-400 text-neutral-900 border border-neutral-900">
+                                                <svg class="w-3.5 h-3.5 text-neutral-900" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                                </svg>
+                                                Selesai (Teknisi sudah servis)
                                             </span>
                                         </td>
-                                        <td class="py-3 pl-4 text-right font-mono text-xs text-forest-800">Login Aktif</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-3 pr-4 font-mono font-semibold text-ink-950">Kamar 103 <span class="text-xs font-sans font-normal text-ink-500 block">AC Standar</span></td>
-                                        <td class="py-3 px-4 font-medium text-ink-900">Dina Safitri</td>
-                                        <td class="py-3 px-4 font-mono text-xs text-ink-700">Rp1.350.000 / bln</td>
-                                        <td class="py-3 px-4">
-                                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-medium bg-paper-100 text-ink-700 border border-paper-200">
-                                                Pengingat Otomatis Tgl 18
-                                            </span>
-                                        </td>
-                                        <td class="py-3 pl-4 text-right font-mono text-xs text-forest-800">Login Aktif</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-3 pr-4 font-mono font-semibold text-ink-950">Kamar 201 <span class="text-xs font-sans font-normal text-ink-500 block">AC Eksklusif</span></td>
-                                        <td class="py-3 px-4 font-medium text-ink-900">Farhan M.</td>
-                                        <td class="py-3 px-4 font-mono text-xs text-ink-700">Rp1.500.000 / bln</td>
-                                        <td class="py-3 px-4">
-                                            <span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded text-xs font-medium bg-terra-100 text-terra-600">
-                                                Menunggu Pembayaran
-                                            </span>
-                                        </td>
-                                        <td class="py-3 pl-4 text-right font-mono text-xs text-forest-800">Login Aktif</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-3 pr-4 font-mono font-semibold text-ink-400">Kamar 104 <span class="text-xs font-sans font-normal text-ink-400 block">Non-AC</span></td>
-                                        <td class="py-3 px-4 text-ink-400 italic">— Tersedia —</td>
-                                        <td class="py-3 px-4 font-mono text-xs text-ink-500">Rp1.100.000 / bln</td>
-                                        <td class="py-3 px-4 text-xs text-ink-400">Siap terima penghuni baru</td>
-                                        <td class="py-3 pl-4 text-right font-mono text-xs text-ink-400">Siap Aktivasi</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
                     </div>
-
-                    <div class="bg-paper-50 px-5 py-3 border-t border-paper-200 flex flex-wrap items-center justify-between gap-2 text-xs text-ink-500">
-                        <span>Seluruh data kamar, tarif, kontrak sewa, dan portal penghuni langsung siap pada hari yang sama.</span>
-                        <span class="font-mono text-ink-900 font-medium">02 / HASIL SETUP KAMI</span>
-                    </div>
                 </div>
 
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- SECTION: APA SAJA YANG ANDA DAPATKAN? (EXACT 4 PILLARS FROM MATERIAL) -->
-    <section id="cakupan-setup" class="py-16 sm:py-24 bg-white border-b border-paper-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- BAGIAN 5: SIAP MENGOTOMATISKAN SEMUA PROSES INI? (CORE OFFER) -->
+        <section id="langkah-selanjutnya" class="py-16 sm:py-24 bg-neutral-900 text-white relative overflow-hidden">
+            <!-- Decorative Neo-Brutalist elements -->
+            <div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-lime-400/10 pointer-events-none blur-3xl"></div>
             
-            <div class="max-w-3xl mb-14">
-                <div class="font-mono text-xs uppercase tracking-widest text-forest-800 font-semibold mb-2">
-                    Cakupan Layanan Setup Awal
-                </div>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-ink-950 tracking-tight">
-                    Apa Saja yang Anda Dapatkan?
-                </h2>
-                <p class="text-ink-700 text-base sm:text-lg mt-3">
-                    Empat fondasi operasional yang langsung kami siapkan di dalam sistem agar rumah kos Anda tertata rapi sejak hari pertama:
-                </p>
-            </div>
-
-            <!-- 4 Pillars Architectural Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 border-t border-l border-paper-200 rounded-2xl overflow-hidden shadow-editorial">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 
-                <!-- Item 01 -->
-                <div class="p-7 sm:p-10 bg-paper-50/40 border-r border-b border-paper-200 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <span class="font-mono text-xs font-semibold px-2.5 py-1 rounded bg-forest-900 text-white">
-                                FONDASI 01
-                            </span>
-                            <span class="font-mono text-xs text-ink-500">Isolasi & Privasi Data</span>
-                        </div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-ink-950 mb-3 leading-snug">
-                            Akun Admin Kos dengan Ruang Data Terpisah & Aman
-                        </h3>
-                        <p class="text-ink-700 text-sm sm:text-base leading-relaxed">
-                            Setiap pengelola mendapatkan ruang kerja khusus yang terisolasi sehingga privasi data kamar, penghuni, dan keuangan kos Anda tetap terjaga.
-                        </p>
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-lime-400 text-neutral-950 font-mono text-xs font-extrabold uppercase mb-4">
+                        ✦ BAGIAN 5 • SISTEM LENGKAP
                     </div>
-
-                    <!-- Mini Architectural Diagram -->
-                    <div class="mt-8 pt-5 border-t border-paper-200 flex items-center justify-between text-xs font-mono text-ink-700 bg-white p-3.5 rounded-xl border border-paper-200">
-                        <div class="flex items-center gap-2.5">
-                            <svg class="w-4 h-4 text-forest-800 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                            </svg>
-                            <span>Workspace Khusus Pemilik Kos</span>
-                        </div>
-                        <span class="text-[11px] px-2 py-0.5 bg-forest-50 text-forest-800 rounded font-semibold">Terisolasi</span>
-                    </div>
-                </div>
-
-                <!-- Item 02 -->
-                <div class="p-7 sm:p-10 bg-paper-50/40 border-r border-b border-paper-200 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <span class="font-mono text-xs font-semibold px-2.5 py-1 rounded bg-forest-900 text-white">
-                                FONDASI 02
-                            </span>
-                            <span class="font-mono text-xs text-ink-500">Migrasi Data Terima Beres</span>
-                        </div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-ink-950 mb-3 leading-snug">
-                            Input Data Awal Kamar, Tarif, & Penghuni Aktif
-                        </h3>
-                        <p class="text-ink-700 text-sm sm:text-base leading-relaxed">
-                            Anda cukup mengirimkan daftar kamar dan penghuni saat ini, lalu kami bantu masukkan ke sistem agar status hunian langsung rapi dan siap dipantau.
-                        </p>
-                    </div>
-
-                    <div class="mt-8 pt-5 border-t border-paper-200 flex items-center justify-between text-xs font-mono text-ink-700 bg-white p-3.5 rounded-xl border border-paper-200">
-                        <div class="flex items-center gap-2.5">
-                            <svg class="w-4 h-4 text-forest-800 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                            </svg>
-                            <span>Kamar • Tarif • Penghuni Aktif</span>
-                        </div>
-                        <span class="text-[11px] px-2 py-0.5 bg-forest-50 text-forest-800 rounded font-semibold">Diinputkan Tim</span>
-                    </div>
-                </div>
-
-                <!-- Item 03 -->
-                <div class="p-7 sm:p-10 bg-paper-50/40 border-r border-b border-paper-200 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <span class="font-mono text-xs font-semibold px-2.5 py-1 rounded bg-forest-900 text-white">
-                                FONDASI 03
-                            </span>
-                            <span class="font-mono text-xs text-ink-500">Otomasi Aturan Sewa</span>
-                        </div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-ink-950 mb-3 leading-snug">
-                            Penyiapan Kontrak Sewa Digital & Alur Penagihan
-                        </h3>
-                        <p class="text-ink-700 text-sm sm:text-base leading-relaxed">
-                            Format kontrak sewa digital, jadwal jatuh tempo, serta pengingat tagihan otomatis langsung diatur sesuai aturan kos Anda.
-                        </p>
-                    </div>
-
-                    <div class="mt-8 pt-5 border-t border-paper-200 flex items-center justify-between text-xs font-mono text-ink-700 bg-white p-3.5 rounded-xl border border-paper-200">
-                        <div class="flex items-center gap-2.5">
-                            <svg class="w-4 h-4 text-forest-800 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                            </svg>
-                            <span>Kontrak • Jatuh Tempo • Pengingat</span>
-                        </div>
-                        <span class="text-[11px] px-2 py-0.5 bg-forest-50 text-forest-800 rounded font-semibold">Sesuai Aturan Kos</span>
-                    </div>
-                </div>
-
-                <!-- Item 04 -->
-                <div class="p-7 sm:p-10 bg-paper-50/40 border-r border-b border-paper-200 flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between mb-6">
-                            <span class="font-mono text-xs font-semibold px-2.5 py-1 rounded bg-forest-900 text-white">
-                                FONDASI 04
-                            </span>
-                            <span class="font-mono text-xs text-ink-500">Portal Login Penghuni</span>
-                        </div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-ink-950 mb-3 leading-snug">
-                            Aktivasi Akses Mandiri untuk Penghuni Kos
-                        </h3>
-                        <p class="text-ink-700 text-sm sm:text-base leading-relaxed">
-                            Penghuni dapat langsung login untuk melihat detail kamar, kontrak sewa, status tagihan, serta mengirim laporan pengaduan tanpa perlu chat berulang kali.
-                        </p>
-                    </div>
-
-                    <div class="mt-8 pt-5 border-t border-paper-200 flex items-center justify-between text-xs font-mono text-ink-700 bg-white p-3.5 rounded-xl border border-paper-200">
-                        <div class="flex items-center gap-2.5">
-                            <svg class="w-4 h-4 text-forest-800 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-                            </svg>
-                            <span>Detail Kamar • Tagihan • Laporan Aduan</span>
-                        </div>
-                        <span class="text-[11px] px-2 py-0.5 bg-forest-50 text-forest-800 rounded font-semibold">Tanpa Chat Berulang</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- INTERACTIVE SYSTEM PREVIEW: LIHAT FONDASI YANG DISIAPKAN -->
-    <section id="pratinjau-sistem" class="py-16 sm:py-24 bg-paper-100 border-b border-paper-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
-                <div>
-                    <div class="font-mono text-xs uppercase tracking-widest text-forest-800 font-semibold mb-2">
-                        Simulasi Sistem Siap Pakai
-                    </div>
-                    <h2 class="text-2xl sm:text-4xl font-extrabold text-ink-950 tracking-tight">
-                        Dua Sisi Sistem yang Langsung Aktif
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                        Bagian 5: Siap Mengotomatiskan Semua Proses Ini?
                     </h2>
-                    <p class="text-ink-700 text-sm sm:text-base mt-2 max-w-2xl">
-                        Saat setup selesai, Anda memegang kendali penuh lewat <strong>Ruang Kerja Admin Kos</strong>, sementara penghuni memiliki <strong>Akses Login Mandiri</strong>.
+                    <p class="text-base sm:text-lg text-neutral-300 leading-relaxed mt-6">
+                        Tingkatkan efisiensi bisnis kos Anda dengan mengaktifkan akses penuh <strong class="text-white font-bold">Sistem Informasi Manajemen Rumah Kos (Core Offer)</strong>. Seluruh alur pengelolaan kamar, penerbitan kontrak digital, pengiriman notifikasi tagihan, verifikasi pembayaran, hingga penyusunan laporan keuangan akan berjalan secara otomatis dalam satu dashboard terintegrasi.
                     </p>
                 </div>
 
-                <!-- Clean Tab Switcher -->
-                <div class="inline-flex p-1 rounded-xl bg-paper-200/80 border border-paper-300 self-start">
-                    <button id="btnViewAdmin" onclick="switchView('admin')" class="px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-forest-900 text-white shadow-sm">
-                        1. Ruang Kerja Admin Kos
-                    </button>
-                    <button id="btnViewTenant" onclick="switchView('tenant')" class="px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-ink-700 hover:text-ink-950">
-                        2. Akses Mandiri Penghuni
-                    </button>
-                </div>
-            </div>
-
-            <!-- VIEW 1: ADMIN WORKSPACE -->
-            <div id="panelAdmin" class="bg-white rounded-2xl border border-paper-200 shadow-editorial overflow-hidden">
-                <div class="bg-paper-50 px-6 py-4 border-b border-paper-200 flex flex-wrap items-center justify-between gap-4">
-                    <div class="flex items-center gap-3">
-                        <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-forest-100 text-forest-900">ADMIN KOS</span>
-                        <span class="text-sm font-semibold text-ink-950">Pantau Pemasukan, Status Kamar & Kontrak Sewa</span>
-                    </div>
-                    <span class="font-mono text-xs text-ink-500">Data Terisolasi &bull; Siap Dipantau Hari yang Sama</span>
-                </div>
-
-                <div class="p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
-                    <!-- Left: Kamar & Status -->
-                    <div class="lg:col-span-7 space-y-4">
-                        <div class="flex items-center justify-between">
-                            <h4 class="text-xs font-mono uppercase tracking-wider text-ink-500 font-semibold">Daftar Kamar, Tarif & Penghuni Aktif</h4>
-                            <span class="text-xs text-forest-800 font-medium">Sudah Diinputkan di Awal</span>
-                        </div>
-
-                        <div class="space-y-2.5">
-                            <div class="p-4 rounded-xl border border-paper-200 bg-paper-50/50 flex flex-wrap items-center justify-between gap-4">
-                                <div>
-                                    <div class="flex items-center gap-2">
-                                        <span class="font-mono font-bold text-sm text-ink-950">Kamar 101</span>
-                                        <span class="text-xs px-2 py-0.5 rounded bg-paper-200 text-ink-700 font-medium">Rian Pratama</span>
-                                    </div>
-                                    <div class="text-xs text-ink-500 mt-1">Kontrak Digital #KS-101 &bull; Jatuh tempo setiap tanggal 5</div>
-                                </div>
-                                <div class="text-right">
-                                    <div class="font-mono font-semibold text-sm text-ink-950">Rp1.500.000</div>
-                                    <span class="inline-block text-[11px] font-mono text-forest-800 bg-forest-50 px-2 py-0.5 rounded border border-forest-100 mt-0.5">Tagihan Lunas</span>
-                                </div>
-                            </div>
-
-                            <div class="p-4 rounded-xl border border-paper-200 bg-paper-50/50 flex flex-wrap items-center justify-between gap-4">
-                                <div>
-                                    <div class="flex items-center gap-2">
-                                        <span class="font-mono font-bold text-sm text-ink-950">Kamar 102</span>
-                                        <span class="text-xs px-2 py-0.5 rounded bg-paper-200 text-ink-700 font-medium">Bagus Setiawan</span>
-                                    </div>
-                                    <div class="text-xs text-ink-500 mt-1">Kontrak Digital #KS-102 &bull; Jatuh tempo setiap tanggal 10</div>
-                                </div>
-                                <div class="text-right">
-                                    <div class="font-mono font-semibold text-sm text-ink-950">Rp1.500.000</div>
-                                    <span class="inline-block text-[11px] font-mono text-forest-800 bg-forest-50 px-2 py-0.5 rounded border border-forest-100 mt-0.5">Tagihan Lunas</span>
-                                </div>
-                            </div>
-
-                            <div class="p-4 rounded-xl border border-terra-500/30 bg-terra-100/20 flex flex-wrap items-center justify-between gap-4">
-                                <div>
-                                    <div class="flex items-center gap-2">
-                                        <span class="font-mono font-bold text-sm text-ink-950">Kamar 201</span>
-                                        <span class="text-xs px-2 py-0.5 rounded bg-paper-200 text-ink-700 font-medium">Farhan M.</span>
-                                    </div>
-                                    <div class="text-xs text-ink-700 mt-1">Kontrak Digital #KS-201 &bull; Pengingat otomatis terkirim H-3</div>
-                                </div>
-                                <div class="text-right">
-                                    <div class="font-mono font-semibold text-sm text-ink-950">Rp1.500.000</div>
-                                    <span class="inline-block text-[11px] font-mono text-terra-600 bg-terra-100 px-2 py-0.5 rounded mt-0.5 font-semibold">Jatuh Tempo Besok</span>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Core Offer Integrated Feature Box -->
+                <div class="bg-neutral-800 rounded-3xl border-2 border-neutral-700 p-8 sm:p-10 mb-10 shadow-2xl">
+                    <div class="text-xs font-mono font-bold uppercase tracking-wider text-lime-400 mb-6 text-center">
+                        Semua Fitur Berjalan Otomatis di Dalam Satu Dashboard
                     </div>
 
-                    <!-- Right: Alur Kontrak & Pengaduan Terpusat -->
-                    <div class="lg:col-span-5 bg-paper-50 rounded-xl p-5 border border-paper-200 flex flex-col justify-between space-y-6">
-                        <div>
-                            <h4 class="text-xs font-mono uppercase tracking-wider text-ink-500 font-semibold mb-3">
-                                Konfigurasi Aturan Sewa & Pengaduan
-                            </h4>
-                            <div class="space-y-3 text-xs sm:text-sm">
-                                <div class="p-3.5 bg-white rounded-lg border border-paper-200">
-                                    <div class="font-semibold text-ink-950 mb-1">Format Kontrak Sewa Digital</div>
-                                    <p class="text-xs text-ink-500 leading-relaxed">
-                                        Aturan kos, nominal sewa, dan tanggal jatuh tempo sudah disesuaikan agar setiap penghuni memiliki dokumen kontrak yang jelas di akun mereka.
-                                    </p>
-                                </div>
-                                <div class="p-3.5 bg-white rounded-lg border border-paper-200">
-                                    <div class="flex items-center justify-between mb-1">
-                                        <span class="font-semibold text-ink-950">Laporan Pengaduan Penghuni</span>
-                                        <span class="font-mono text-[11px] px-2 py-0.5 bg-paper-100 text-ink-700 rounded">Terpusat</span>
-                                    </div>
-                                    <p class="text-xs text-ink-500 leading-relaxed">
-                                        Komplain fasilitas dari kamar langsung tercatat rapi di dashboard admin tanpa menumpuk di chat pribadi Anda.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="pt-4 border-t border-paper-200 flex items-center justify-between text-xs">
-                            <span class="text-ink-500">Ingin melihat tampilan di HP penghuni?</span>
-                            <button onclick="switchView('tenant')" class="font-semibold text-forest-800 hover:underline">
-                                Lihat Portal Penghuni &rarr;
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- VIEW 2: TENANT SELF-SERVICE PORTAL -->
-            <div id="panelTenant" class="hidden bg-white rounded-2xl border border-paper-200 shadow-editorial overflow-hidden">
-                <div class="bg-paper-50 px-6 py-4 border-b border-paper-200 flex flex-wrap items-center justify-between gap-4">
-                    <div class="flex items-center gap-3">
-                        <span class="font-mono text-xs font-bold px-2.5 py-1 rounded bg-forest-900 text-white">PORTAL PENGHUNI</span>
-                        <span class="text-sm font-semibold text-ink-950">Akses Mandiri Penghuni Kos Tanpa Perlu Chat Berulang Kali</span>
-                    </div>
-                    <span class="font-mono text-xs text-ink-500">Diakses via Browser HP Penghuni</span>
-                </div>
-
-                <div class="p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                    <!-- Left Mock Mobile View -->
-                    <div class="lg:col-span-6">
-                        <div class="max-w-md mx-auto bg-paper-50 rounded-2xl border border-paper-200 p-5 shadow-sm">
-                            <div class="flex items-center justify-between pb-3.5 mb-4 border-b border-paper-200">
-                                <div>
-                                    <div class="text-xs font-mono text-ink-500">LOGIN PENGHUNI AKTIF</div>
-                                    <div class="text-base font-bold text-ink-950">Rian Pratama — Kamar 101</div>
-                                </div>
-                                <span class="px-2.5 py-1 rounded text-xs font-mono font-semibold bg-forest-100 text-forest-900">Sewa Aktif</span>
-                            </div>
-
-                            <div class="space-y-3 text-xs">
-                                <div class="bg-white p-3.5 rounded-xl border border-paper-200 flex justify-between items-center">
-                                    <div>
-                                        <span class="text-ink-500 block">Detail Kamar & Tarif</span>
-                                        <strong class="text-ink-950 text-sm">Kamar 101 (AC) &bull; Rp1.500.000/bln</strong>
-                                    </div>
-                                    <span class="font-mono text-forest-800 font-semibold">Terdaftar</span>
-                                </div>
-
-                                <div class="bg-white p-3.5 rounded-xl border border-paper-200 flex justify-between items-center">
-                                    <div>
-                                        <span class="text-ink-500 block">Kontrak Sewa Digital</span>
-                                        <strong class="text-ink-950">Dokumen Kontrak & Aturan Kos</strong>
-                                    </div>
-                                    <span class="px-2.5 py-1 rounded bg-paper-100 text-ink-900 font-medium">Buka Kontrak</span>
-                                </div>
-
-                                <div class="bg-white p-3.5 rounded-xl border border-paper-200 flex justify-between items-center">
-                                    <div>
-                                        <span class="text-ink-500 block">Status Tagihan Bulan Ini</span>
-                                        <strong class="text-forest-800">Lunas &bull; Jatuh Tempo Berikutnya: 5 Des</strong>
-                                    </div>
-                                    <span class="px-2 py-0.5 rounded bg-forest-50 text-forest-800 font-mono">Lunas</span>
-                                </div>
-
-                                <div class="bg-white p-3.5 rounded-xl border border-paper-200">
-                                    <div class="font-semibold text-ink-950 mb-1">Kirim Laporan Pengaduan</div>
-                                    <div class="p-2 rounded bg-paper-50 border border-paper-200 text-ink-700 font-mono text-[11px] mb-2">
-                                        "Lampu kamar mandi agak redup, mohon dicek."
-                                    </div>
-                                    <div class="text-right">
-                                        <span class="inline-block px-3 py-1 rounded bg-forest-900 text-white font-semibold text-[11px]">Terkirim ke Admin Kos</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Explanation -->
-                    <div class="lg:col-span-6 space-y-5">
-                        <h3 class="text-xl sm:text-2xl font-bold text-ink-950">
-                            Semua Informasi Kamar & Tagihan Transparan bagi Penghuni
-                        </h3>
-                        <p class="text-ink-700 text-sm sm:text-base leading-relaxed">
-                            Dengan mengaktifkan akses mandiri untuk penghuni kos, komunikasi antara pemilik dan penghuni menjadi jauh lebih profesional dan tertata:
-                        </p>
-                        <ul class="space-y-3 text-sm text-ink-700">
-                            <li class="flex items-start gap-3">
-                                <span class="font-mono text-xs font-bold text-forest-800 bg-forest-100 px-2 py-0.5 rounded mt-0.5">01</span>
-                                <span><strong>Detail Kamar & Kontrak Sewa:</strong> Penghuni bisa membaca kembali aturan kos dan masa sewa kapan saja.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="font-mono text-xs font-bold text-forest-800 bg-forest-100 px-2 py-0.5 rounded mt-0.5">02</span>
-                                <span><strong>Status Tagihan Jelas:</strong> Tidak perlu bertanya berulang kali perihal tanggal jatuh tempo maupun riwayat pembayaran.</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="font-mono text-xs font-bold text-forest-800 bg-forest-100 px-2 py-0.5 rounded mt-0.5">03</span>
-                                <span><strong>Laporan Pengaduan Rapi:</strong> Keluhan fasilitas langsung dikirim lewat portal penghuni dan tercatat di sistem Anda.</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SECTION: MENGAPA MEMULAI DENGAN PAKET INI? (EXACT COPY FROM MATERIAL) -->
-    <section id="mengapa-paket-ini" class="py-16 sm:py-24 bg-white border-b border-paper-200">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-                
-                <!-- Left Editorial Narrative -->
-                <div class="lg:col-span-7">
-                    <div class="font-mono text-xs uppercase tracking-widest text-forest-800 font-semibold mb-2">
-                        Efisiensi Waktu & Operasional
-                    </div>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-ink-950 tracking-tight mb-6">
-                        Mengapa Memulai dengan Paket Ini?
-                    </h2>
-
-                    <!-- Exact Paragraph from Material -->
-                    <div class="p-6 sm:p-8 rounded-2xl bg-paper-50 border border-paper-200 mb-8">
-                        <p class="text-base sm:text-xl text-ink-900 leading-relaxed font-medium">
-                            "Anda tidak perlu menghabiskan akhir pekan untuk mengutak-atik sistem dari awal atau bingung menata data. Cukup dengan investasi satu kali sebesar <strong class="text-forest-800 underline decoration-forest-700/40">Rp99.000</strong>, seluruh operasional kos Anda sudah terstruktur secara digital dan siap digunakan pada hari yang sama—sebelum Anda memutuskan melanjutkan ke paket berlangganan reguler."
-                        </p>
-                    </div>
-
-                    <!-- Side-by-Side Comparison: Setup Sendiri vs Paket Aktivasi -->
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="p-5 rounded-xl border border-paper-200 bg-white">
-                            <div class="font-mono text-xs text-ink-500 uppercase mb-2">Jika Setup Sendiri dari Nol</div>
-                            <ul class="space-y-2.5 text-xs sm:text-sm text-ink-700">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-terra-600 font-bold">&times;</span>
-                                    <span>Menghabiskan waktu akhir pekan mengutak-atik menu & pengaturan dari awal.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-terra-600 font-bold">&times;</span>
-                                    <span>Harus mengetik ulang data kamar, tarif, dan penghuni satu per satu dari buku tulis.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-terra-600 font-bold">&times;</span>
-                                    <span>Sering tertunda karena bingung menyusun format kontrak & jadwal tagihan.</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="p-5 rounded-xl border border-forest-700/30 bg-forest-50/60">
-                            <div class="font-mono text-xs text-forest-800 font-semibold uppercase mb-2">Dengan Paket Aktivasi Rp99.000</div>
-                            <ul class="space-y-2.5 text-xs sm:text-sm text-ink-900">
-                                <li class="flex items-start gap-2">
-                                    <span class="text-forest-700 font-bold">&check;</span>
-                                    <span>Seluruh fondasi awal disiapkan penuh oleh tim kami, langsung terima beres.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-forest-700 font-bold">&check;</span>
-                                    <span>Operasional kos terstruktur secara digital dan siap digunakan pada hari yang sama.</span>
-                                </li>
-                                <li class="flex items-start gap-2">
-                                    <span class="text-forest-700 font-bold">&check;</span>
-                                    <span>Rasakan langsung kerapian sistem sebelum memutuskan lanjut ke paket berlangganan reguler.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Step-by-Step Alur Aktivasi -->
-                <div class="lg:col-span-5 bg-paper-100 rounded-2xl p-6 sm:p-8 border border-paper-200">
-                    <div class="font-mono text-xs uppercase tracking-wider text-ink-500 font-semibold mb-2">
-                        Alur Pengerjaan
-                    </div>
-                    <h3 class="text-xl font-bold text-ink-950 mb-6">
-                        Bagaimana Proses Aktivasi di Hari yang Sama?
-                    </h3>
-
-                    <div class="space-y-6">
-                        <div class="flex gap-4">
-                            <div class="w-8 h-8 rounded-lg bg-forest-900 text-white font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
-                                01
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                        
+                        <div class="bg-neutral-900 p-5 rounded-2xl border border-neutral-700 flex items-start gap-3.5">
+                            <div class="w-8 h-8 rounded-lg bg-lime-400 text-neutral-900 font-bold flex items-center justify-center shrink-0">
+                                ✓
                             </div>
                             <div>
-                                <h4 class="font-bold text-ink-950 text-sm sm:text-base">Pesan Paket Aktivasi Rp99.000</h4>
-                                <p class="text-xs sm:text-sm text-ink-700 mt-1 leading-relaxed">
-                                    Klik tombol aktivasi dan konfirmasi pemesanan paket sekali beli. Kami segera membuatkan ruang kerja admin kos Anda yang terpisah dan aman.
-                                </p>
+                                <h4 class="font-bold text-white text-sm sm:text-base">Pengelolaan Kamar</h4>
+                                <p class="text-xs text-neutral-400 mt-1">Status kamar terisi, kosong, atau booking terupdate otomatis.</p>
                             </div>
                         </div>
 
-                        <div class="flex gap-4">
-                            <div class="w-8 h-8 rounded-lg bg-forest-900 text-white font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
-                                02
+                        <div class="bg-neutral-900 p-5 rounded-2xl border border-neutral-700 flex items-start gap-3.5">
+                            <div class="w-8 h-8 rounded-lg bg-lime-400 text-neutral-900 font-bold flex items-center justify-center shrink-0">
+                                ✓
                             </div>
                             <div>
-                                <h4 class="font-bold text-ink-950 text-sm sm:text-base">Kirim Daftar Kamar & Penghuni Saat Ini</h4>
-                                <p class="text-xs sm:text-sm text-ink-700 mt-1 leading-relaxed">
-                                    Kirimkan catatan kamar, tarif, aturan sewa, serta daftar penghuni aktif Anda (bisa dari foto buku tulis, chat WhatsApp, atau daftar sederhana).
-                                </p>
+                                <h4 class="font-bold text-white text-sm sm:text-base">Kontrak Sewa Digital</h4>
+                                <p class="text-xs text-neutral-400 mt-1">Penerbitan kontrak instan langsung ke akun penghuni.</p>
                             </div>
                         </div>
 
-                        <div class="flex gap-4">
-                            <div class="w-8 h-8 rounded-lg bg-forest-900 text-white font-mono text-xs font-bold flex items-center justify-center shrink-0 mt-0.5">
-                                03
+                        <div class="bg-neutral-900 p-5 rounded-2xl border border-neutral-700 flex items-start gap-3.5">
+                            <div class="w-8 h-8 rounded-lg bg-lime-400 text-neutral-900 font-bold flex items-center justify-center shrink-0">
+                                ✓
                             </div>
                             <div>
-                                <h4 class="font-bold text-ink-950 text-sm sm:text-base">Sistem Siap Digunakan Hari Itu Juga</h4>
-                                <p class="text-xs sm:text-sm text-ink-700 mt-1 leading-relaxed">
-                                    Tim kami menginputkan data kamar, menyetel kontrak sewa digital, jadwal jatuh tempo, dan mengaktifkan akses login penghuni. Anda tinggal login dan memantau dengan tenang.
-                                </p>
+                                <h4 class="font-bold text-white text-sm sm:text-base">Pengingat Tagihan H-3</h4>
+                                <p class="text-xs text-neutral-400 mt-1">Notifikasi tagihan otomatis dikirim sebelum jatuh tempo.</p>
                             </div>
                         </div>
+
+                        <div class="bg-neutral-900 p-5 rounded-2xl border border-neutral-700 flex items-start gap-3.5">
+                            <div class="w-8 h-8 rounded-lg bg-lime-400 text-neutral-900 font-bold flex items-center justify-center shrink-0">
+                                ✓
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm sm:text-base">Verifikasi & Resi</h4>
+                                <p class="text-xs text-neutral-400 mt-1">Pencatatan pembayaran lunas dan cetak resi digital seketika.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-neutral-900 p-5 rounded-2xl border border-neutral-700 flex items-start gap-3.5">
+                            <div class="w-8 h-8 rounded-lg bg-lime-400 text-neutral-900 font-bold flex items-center justify-center shrink-0">
+                                ✓
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm sm:text-base">Pusat Tiket Aduan</h4>
+                                <p class="text-xs text-neutral-400 mt-1">Komplain fasilitas tidak berserakan di chat pribadi.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-neutral-900 p-5 rounded-2xl border border-neutral-700 flex items-start gap-3.5">
+                            <div class="w-8 h-8 rounded-lg bg-lime-400 text-neutral-900 font-bold flex items-center justify-center shrink-0">
+                                ✓
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm sm:text-base">Laporan Keuangan</h4>
+                                <p class="text-xs text-neutral-400 mt-1">Arus kas pemasukan & pengeluaran tersaji transparan.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Call To Action Buttons inside Core Offer -->
+                    <div class="mt-10 pt-8 border-t border-neutral-700 flex flex-col sm:flex-row items-center justify-center gap-4">
+                        <button onclick="openSetupModal()" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 rounded-xl bg-lime-400 hover:bg-lime-300 text-neutral-950 font-extrabold text-base transition-all gap-2 shadow-neo">
+                            <span>Aktifkan Core Offer KosinAja Sekarang</span>
+                            <svg class="w-5 h-5 text-neutral-950" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                        <button onclick="window.print()" class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-4 rounded-xl border-2 border-neutral-600 hover:border-white text-white font-bold text-base transition-all">
+                            Simpan PDF Materi Ini
+                        </button>
                     </div>
                 </div>
 
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- MAIN OFFER / TRIPWIRE CHECKOUT CARD (EXACT TABLE / BOX FROM MATERIAL) -->
-    <section id="paket-aktivasi" class="py-16 sm:py-24 bg-paper-50 bg-grid-line">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="bg-white rounded-2xl border-2 border-forest-900 shadow-window overflow-hidden">
-                
-                <!-- Top Header Bar -->
-                <div class="bg-forest-900 text-paper-50 px-6 sm:px-10 py-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                    <div>
-                        <span class="font-mono text-xs uppercase tracking-widest text-emerald-300 block mb-1">
-                            Ringkasan Paket Onboarding
-                        </span>
-                        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-                            Paket Aktivasi & Setup Awal Rumah Kos
-                        </h2>
-                    </div>
-                    <div class="sm:text-right">
-                        <span class="inline-block font-mono text-xs bg-forest-800 text-paper-100 px-3 py-1 rounded border border-forest-700">
-                            Siap Digunakan di Hari yang Sama
-                        </span>
-                    </div>
+    <!-- FOOTER (Clean modern KosinAja branding) -->
+    <footer class="bg-white border-t border-neutral-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-2.5">
+                    <svg class="w-6 h-6 text-neutral-900" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0L14.7 9.3L24 12L14.7 14.7L12 24L9.3 14.7L0 12L9.3 9.3L12 0Z" />
+                    </svg>
+                    <span class="text-xl font-extrabold text-neutral-900">KosinAja</span>
+                    <span class="text-xs text-neutral-500 font-mono pl-2 border-l border-neutral-300">Sistem Operasional Rumah Kos</span>
                 </div>
-
-                <!-- Card Body -->
-                <div class="p-6 sm:p-10">
-                    
-                    <!-- Deliverables Summary List -->
-                    <div class="mb-8">
-                        <div class="text-xs font-mono uppercase tracking-wider text-ink-500 font-semibold mb-4">
-                            Seluruh Fondasi Awal yang Kami Siapkan untuk Kos Anda:
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <div class="p-4 rounded-xl bg-paper-50 border border-paper-200 flex items-start gap-3">
-                                <svg class="w-5 h-5 text-forest-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                                </svg>
-                                <div class="text-xs sm:text-sm">
-                                    <strong class="text-ink-950 block">Akun Admin Kos dengan Ruang Data Terpisah & Aman</strong>
-                                    <span class="text-ink-500">Ruang kerja khusus yang terisolasi untuk menjaga privasi data kamar, penghuni, dan keuangan.</span>
-                                </div>
-                            </div>
-
-                            <div class="p-4 rounded-xl bg-paper-50 border border-paper-200 flex items-start gap-3">
-                                <svg class="w-5 h-5 text-forest-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                                </svg>
-                                <div class="text-xs sm:text-sm">
-                                    <strong class="text-ink-950 block">Input Data Awal Kamar, Tarif, & Penghuni Aktif</strong>
-                                    <span class="text-ink-500">Kirimkan daftar kamar & penghuni saat ini, kami masukkan ke sistem sampai rapi.</span>
-                                </div>
-                            </div>
-
-                            <div class="p-4 rounded-xl bg-paper-50 border border-paper-200 flex items-start gap-3">
-                                <svg class="w-5 h-5 text-forest-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                                </svg>
-                                <div class="text-xs sm:text-sm">
-                                    <strong class="text-ink-950 block">Penyiapan Kontrak Sewa Digital & Alur Penagihan</strong>
-                                    <span class="text-ink-500">Format kontrak digital, jadwal jatuh tempo, dan pengingat tagihan otomatis sesuai aturan kos.</span>
-                                </div>
-                            </div>
-
-                            <div class="p-4 rounded-xl bg-paper-50 border border-paper-200 flex items-start gap-3">
-                                <svg class="w-5 h-5 text-forest-800 shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                                </svg>
-                                <div class="text-xs sm:text-sm">
-                                    <strong class="text-ink-950 block">Aktivasi Akses Mandiri untuk Penghuni Kos</strong>
-                                    <span class="text-ink-500">Login penghuni untuk cek detail kamar, kontrak, status tagihan, dan kirim laporan pengaduan.</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Exact Price & CTA Callout Box from Material -->
-                    <div class="p-6 sm:p-8 rounded-2xl bg-paper-100 border border-paper-200 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                        <div>
-                            <div class="text-xs font-mono uppercase tracking-wider text-ink-500 font-semibold">
-                                Investasi Sekali Beli
-                            </div>
-                            <div class="flex items-baseline gap-3 mt-1">
-                                <span class="text-3xl sm:text-4xl font-extrabold text-ink-950 font-mono tracking-tight">Rp99.000</span>
-                                <span class="text-xs sm:text-sm font-medium text-forest-800 bg-forest-100 px-2.5 py-0.5 rounded">Sekali Beli</span>
-                            </div>
-                            <p class="text-xs sm:text-sm text-ink-700 mt-1.5 font-medium">
-                                (Tanpa biaya tersembunyi, langsung siap pakai)
-                            </p>
-                        </div>
-
-                        <div class="w-full md:w-auto">
-                            <a href="https://wa.me/6285871444639?text=Halo%2C%20saya%20ingin%20memesan%20Paket%20Aktivasi%20%26%20Setup%20Awal%20Sistem%20Informasi%20Manajemen%20Rumah%20Kos%20%E2%80%94%20Rp99.000%20(Sekali%20Beli)." target="_blank" rel="noopener noreferrer" class="w-full md:w-auto inline-flex items-center justify-center gap-3 bg-forest-900 hover:bg-forest-800 text-white font-bold text-sm sm:text-base px-7 py-4 rounded-xl shadow-editorial transition-all">
-                                <span>Aktifkan & Setup Kos Saya Sekarang — Rp99.000</span>
-                                <svg class="w-4 h-4 text-paper-200 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
+                <div class="text-xs text-neutral-500 text-center sm:text-right">
+                    Paket Aktivasi & Template Awal Operasional Rumah Kos &copy; 2026 KosinAja. Seluruh hak cipta dilindungi.
                 </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- FAQ SINGKAT & RELEVAN DENGAN MATERI -->
-    <section class="py-16 bg-white border-t border-paper-200">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h3 class="text-xl sm:text-2xl font-bold text-ink-950 mb-6">
-                Pertanyaan Umum Seputar Paket Aktivasi Awal
-            </h3>
-
-            <div class="divide-y divide-paper-200 border-y border-paper-200">
-                <div class="py-4">
-                    <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left font-semibold text-sm sm:text-base text-ink-950 py-1">
-                        <span>Apa yang perlu saya siapkan setelah memesan paket Rp99.000 ini?</span>
-                        <span class="font-mono text-lg text-ink-500 ml-4">+</span>
-                    </button>
-                    <div class="hidden pt-2 text-sm text-ink-700 leading-relaxed">
-                        Anda cukup mengirimkan daftar kamar, tarif sewa, aturan jatuh tempo, dan daftar penghuni aktif saat ini (bisa berupa foto catatan buku tulis atau pesan WhatsApp). Tim kami yang akan memasukkan dan menyusun semuanya ke dalam sistem.
-                    </div>
-                </div>
-
-                <div class="py-4">
-                    <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left font-semibold text-sm sm:text-base text-ink-950 py-1">
-                        <span>Apakah data kamar dan keuangan kos saya tercampur dengan pemilik kos lain?</span>
-                        <span class="font-mono text-lg text-ink-500 ml-4">+</span>
-                    </button>
-                    <div class="hidden pt-2 text-sm text-ink-700 leading-relaxed">
-                        Tidak. Setiap pengelola mendapatkan Akun Admin Kos dengan ruang kerja khusus yang terisolasi sehingga privasi data kamar, penghuni, dan keuangan kos Anda tetap terjaga.
-                    </div>
-                </div>
-
-                <div class="py-4">
-                    <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between text-left font-semibold text-sm sm:text-base text-ink-950 py-1">
-                        <span>Apakah Rp99.000 ini langsung mengikat ke biaya berlangganan bulanan?</span>
-                        <span class="font-mono text-lg text-ink-500 ml-4">+</span>
-                    </button>
-                    <div class="hidden pt-2 text-sm text-ink-700 leading-relaxed">
-                        Paket ini adalah investasi sekali beli sebesar Rp99.000 (tanpa biaya tersembunyi) agar seluruh operasional kos Anda terstruktur secara digital dan siap digunakan pada hari yang sama—sebelum Anda memutuskan melanjutkan ke paket berlangganan reguler.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MINIMAL FOOTER -->
-    <footer class="bg-paper-100 border-t border-paper-200 py-10 text-xs text-ink-500">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div class="flex items-center gap-2.5">
-                <span class="w-6 h-6 rounded bg-forest-900 text-white font-mono text-[10px] font-bold flex items-center justify-center">SK</span>
-                <span class="font-semibold text-ink-900">Sistem Informasi Manajemen Rumah Kos</span>
-            </div>
-            <div>
-                Paket Aktivasi & Setup Awal Rumah Kos — Rp99.000 (Sekali Beli)
             </div>
         </div>
     </footer>
 
-    <!-- MODAL FORM AKTIVASI & PENGIRIMAN DATA AWAL -->
-    <div id="setupModal" onclick="if(event.target === this) closeSetupModal()" class="fixed inset-0 bg-ink-950/60 backdrop-blur-xs z-50 hidden items-center justify-center p-4">
-        <div class="bg-white rounded-2xl max-w-lg w-full border border-paper-200 shadow-window overflow-hidden">
-            <div class="bg-forest-900 text-white px-6 py-5 flex items-center justify-between">
+    <!-- MODAL: CHECKLIST KESIAPAN KOS -->
+    <div id="checklistModal" onclick="if(event.target === this) closeChecklistModal()" class="fixed inset-0 bg-neutral-900/60 backdrop-blur-xs z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full border-2 border-neutral-900 shadow-neo-lg overflow-hidden animate-in fade-in duration-200">
+            <div class="bg-lime-400 p-6 border-b-2 border-neutral-900 flex items-center justify-between">
                 <div>
-                    <span class="font-mono text-[11px] uppercase tracking-wider text-emerald-300 block">Formulir Aktivasi</span>
-                    <h3 class="text-lg font-bold text-white">Paket Aktivasi & Setup Awal Rumah Kos</h3>
+                    <span class="font-mono text-xs font-extrabold uppercase tracking-wider text-neutral-900 block">KosinAja Assessment</span>
+                    <h3 class="text-xl font-extrabold text-neutral-900">Checklist Kesiapan Kos</h3>
                 </div>
-                <button onclick="closeSetupModal()" class="w-8 h-8 rounded-lg bg-forest-800 hover:bg-forest-700 text-paper-100 flex items-center justify-center font-mono text-sm">
+                <button onclick="closeChecklistModal()" class="w-9 h-9 rounded-full bg-neutral-900 text-white font-bold flex items-center justify-center text-sm">
+                    &times;
+                </button>
+            </div>
+
+            <div class="p-6 space-y-4">
+                <p class="text-xs sm:text-sm text-neutral-600">
+                    Beri tanda centang pada hal yang saat ini sudah Anda miliki untuk mengetahui tingkat kesiapan digitalisasi kos Anda:
+                </p>
+
+                <div class="space-y-3 text-xs sm:text-sm">
+                    <label class="flex items-start gap-3 p-3 rounded-xl border border-neutral-200 hover:bg-neutral-50 cursor-pointer">
+                        <input type="checkbox" class="mt-0.5 rounded text-neutral-900 focus:ring-neutral-900" onchange="calcChecklist()">
+                        <span class="text-neutral-800">Daftar lengkap nomor kamar, tipe (AC/Non-AC), dan fasilitas tiap kamar.</span>
+                    </label>
+
+                    <label class="flex items-start gap-3 p-3 rounded-xl border border-neutral-200 hover:bg-neutral-50 cursor-pointer">
+                        <input type="checkbox" class="mt-0.5 rounded text-neutral-900 focus:ring-neutral-900" onchange="calcChecklist()">
+                        <span class="text-neutral-800">Tata tertib dan peraturan kos standar yang sudah disepakati penghuni.</span>
+                    </label>
+
+                    <label class="flex items-start gap-3 p-3 rounded-xl border border-neutral-200 hover:bg-neutral-50 cursor-pointer">
+                        <input type="checkbox" class="mt-0.5 rounded text-neutral-900 focus:ring-neutral-900" onchange="calcChecklist()">
+                        <span class="text-neutral-800">Format surat / kontrak sewa digital tertulis dengan kontak darurat.</span>
+                    </label>
+
+                    <label class="flex items-start gap-3 p-3 rounded-xl border border-neutral-200 hover:bg-neutral-50 cursor-pointer">
+                        <input type="checkbox" class="mt-0.5 rounded text-neutral-900 focus:ring-neutral-900" onchange="calcChecklist()">
+                        <span class="text-neutral-800">Jadwal tanggal jatuh tempo penagihan berkala (notifikasi H-3).</span>
+                    </label>
+
+                    <label class="flex items-start gap-3 p-3 rounded-xl border border-neutral-200 hover:bg-neutral-50 cursor-pointer">
+                        <input type="checkbox" class="mt-0.5 rounded text-neutral-900 focus:ring-neutral-900" onchange="calcChecklist()">
+                        <span class="text-neutral-800">Buku rekapan pengaduan kerusakan fasilitas kamar agar segera ditangani teknisi.</span>
+                    </label>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-neutral-50 border border-neutral-200 flex items-center justify-between">
+                    <div>
+                        <span class="text-xs text-neutral-500 block">Skor Kesiapan Anda:</span>
+                        <strong id="checklistScore" class="text-lg font-mono text-neutral-900">0 / 5 Item Terpenuhi</strong>
+                    </div>
+                    <span id="checklistBadge" class="text-xs font-bold px-2.5 py-1 rounded-full bg-neutral-200 text-neutral-800">Perlu Template Awal</span>
+                </div>
+
+                <button onclick="closeChecklistModal(); openSetupModal();" class="w-full py-3.5 px-4 rounded-xl bg-neutral-900 hover:bg-black text-white font-bold text-sm transition-all flex items-center justify-center gap-2 shadow-neo">
+                    <span>Lengkapi & Otomatiskan dengan KosinAja</span>
+                    <span>&rarr;</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: ORDER / KONSULTASI SETUP OTOMASI -->
+    <div id="setupModal" onclick="if(event.target === this) closeSetupModal()" class="fixed inset-0 bg-neutral-900/60 backdrop-blur-xs z-50 hidden items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full border-2 border-neutral-900 shadow-neo-lg overflow-hidden animate-in fade-in duration-200">
+            <div class="bg-lime-400 p-6 border-b-2 border-neutral-900 flex items-center justify-between">
+                <div>
+                    <span class="font-mono text-xs font-extrabold uppercase tracking-wider text-neutral-900 block">KosinAja Core Offer</span>
+                    <h3 class="text-xl font-extrabold text-neutral-900">Aktivasi Sistem Manajemen Kos</h3>
+                </div>
+                <button onclick="closeSetupModal()" class="w-9 h-9 rounded-full bg-neutral-900 text-white font-bold flex items-center justify-center text-sm">
                     &times;
                 </button>
             </div>
 
             <form onsubmit="submitSetupOrder(event)" class="p-6 space-y-4">
                 <div>
-                    <label class="block text-xs font-semibold text-ink-900 mb-1" for="inputKosName">Nama Rumah Kos *</label>
-                    <input id="inputKosName" type="text" required placeholder="Contoh: Kos Griya Asri" class="w-full px-3.5 py-2.5 rounded-lg border border-paper-300 text-sm text-ink-950 focus:outline-none focus:border-forest-800">
+                    <label class="block text-xs font-bold text-neutral-900 mb-1" for="inputKosName">Nama Rumah Kos *</label>
+                    <input id="inputKosName" type="text" required placeholder="Contoh: Griya Kos Asri" class="w-full px-3.5 py-2.5 rounded-xl border-2 border-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-lime-400">
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                        <label class="block text-xs font-semibold text-ink-900 mb-1" for="inputOwnerName">Nama Pengelola / Pemilik *</label>
-                        <input id="inputOwnerName" type="text" required placeholder="Nama Anda" class="w-full px-3.5 py-2.5 rounded-lg border border-paper-300 text-sm text-ink-950 focus:outline-none focus:border-forest-800">
+                        <label class="block text-xs font-bold text-neutral-900 mb-1" for="inputOwnerName">Nama Pengelola / Pemilik *</label>
+                        <input id="inputOwnerName" type="text" required placeholder="Nama Anda" class="w-full px-3.5 py-2.5 rounded-xl border-2 border-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-lime-400">
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-ink-900 mb-1" for="inputRoomCount">Jumlah Kamar Saat Ini *</label>
-                        <input id="inputRoomCount" type="number" required min="1" placeholder="Contoh: 12" class="w-full px-3.5 py-2.5 rounded-lg border border-paper-300 text-sm text-ink-950 focus:outline-none focus:border-forest-800">
+                        <label class="block text-xs font-bold text-neutral-900 mb-1" for="inputRoomCount">Jumlah Kamar Saat Ini *</label>
+                        <input id="inputRoomCount" type="number" required min="1" placeholder="Contoh: 10" class="w-full px-3.5 py-2.5 rounded-xl border-2 border-neutral-900 text-sm focus:outline-none focus:ring-2 focus:ring-lime-400">
                     </div>
                 </div>
 
                 <div>
-                    <label class="block text-xs font-semibold text-ink-900 mb-1" for="inputDataFormat">Kondisi Catatan Kos Saat Ini</label>
-                    <select id="inputDataFormat" class="w-full px-3.5 py-2.5 rounded-lg border border-paper-300 text-sm text-ink-950 bg-white focus:outline-none focus:border-forest-800">
-                        <option value="Buku tulis / catatan manual">Masih di buku tulis / catatan manual</option>
-                        <option value="Chat WhatsApp">Tersebar di chat WhatsApp</option>
-                        <option value="Excel / Spreadsheet">Sudah ada di Excel / Spreadsheet</option>
+                    <label class="block text-xs font-bold text-neutral-900 mb-1" for="inputDataFormat">Format Catatan Kos Saat Ini</label>
+                    <select id="inputDataFormat" class="w-full px-3.5 py-2.5 rounded-xl border-2 border-neutral-900 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-lime-400">
+                        <option value="Buku Tulis / Manual">Masih di Buku Tulis / Manual</option>
+                        <option value="Chat WhatsApp">Tersebar di Chat WhatsApp</option>
+                        <option value="Excel / Spreadsheet">Sudah di Excel / Spreadsheet</option>
                     </select>
                 </div>
 
-                <div class="p-3.5 rounded-xl bg-paper-50 border border-paper-200 flex items-center justify-between text-xs">
+                <div class="p-3.5 rounded-xl bg-lime-100 border border-neutral-900 flex items-center justify-between text-xs">
                     <div>
-                        <span class="text-ink-500 block">Investasi Sekali Beli:</span>
-                        <strong class="text-sm text-ink-950 font-mono">Rp99.000</strong>
-                        <span class="text-ink-500"> (Tanpa biaya tersembunyi)</span>
+                        <span class="text-neutral-700 block font-medium">Paket Aktivasi & Template:</span>
+                        <strong class="text-sm text-neutral-900 font-mono">Siap Pakai & Terintegrasi</strong>
                     </div>
-                    <span class="font-mono text-[11px] px-2 py-0.5 bg-forest-100 text-forest-900 rounded font-semibold">Siap Pakai</span>
+                    <span class="font-mono text-[11px] px-2.5 py-1 bg-neutral-900 text-lime-400 rounded-lg font-bold">Resmi KosinAja</span>
                 </div>
 
-                <button type="submit" class="w-full py-3.5 px-5 rounded-xl bg-forest-900 hover:bg-forest-800 text-white font-bold text-sm transition-colors flex items-center justify-center gap-2">
-                    <span>Aktifkan & Setup Kos Saya Sekarang — Rp99.000</span>
+                <button type="submit" class="w-full py-3.5 px-5 rounded-xl bg-neutral-900 hover:bg-black text-white font-bold text-sm transition-all flex items-center justify-center gap-2 shadow-neo">
+                    <span>Kirim & Konsultasi ke WhatsApp Admin</span>
                     <span>&rarr;</span>
                 </button>
             </form>
         </div>
     </div>
 
+    <!-- SCRIPT LOGIC -->
     <script>
-        function switchView(view) {
-            const btnAdmin = document.getElementById('btnViewAdmin');
-            const btnTenant = document.getElementById('btnViewTenant');
-            const panelAdmin = document.getElementById('panelAdmin');
-            const panelTenant = document.getElementById('panelTenant');
-
-            if (view === 'admin') {
-                btnAdmin.className = 'px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-forest-900 text-white shadow-sm';
-                btnTenant.className = 'px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-ink-700 hover:text-ink-950';
-                panelAdmin.classList.remove('hidden');
-                panelTenant.classList.add('hidden');
-            } else {
-                btnTenant.className = 'px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-forest-900 text-white shadow-sm';
-                btnAdmin.className = 'px-4 py-2 rounded-lg text-xs sm:text-sm font-semibold transition-all text-ink-700 hover:text-ink-950';
-                panelTenant.classList.remove('hidden');
-                panelAdmin.classList.add('hidden');
-            }
+        function openChecklistModal() {
+            const modal = document.getElementById('checklistModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
         }
 
-        function toggleFaq(btn) {
-            const answer = btn.nextElementSibling;
-            const symbol = btn.querySelector('span:last-child');
-            if (answer.classList.contains('hidden')) {
-                answer.classList.remove('hidden');
-                symbol.textContent = '−';
+        function closeChecklistModal() {
+            const modal = document.getElementById('checklistModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        function calcChecklist() {
+            const checkedCount = document.querySelectorAll('#checklistModal input[type="checkbox"]:checked').length;
+            const scoreLabel = document.getElementById('checklistScore');
+            const badge = document.getElementById('checklistBadge');
+            
+            scoreLabel.textContent = `${checkedCount} / 5 Item Terpenuhi`;
+
+            if (checkedCount <= 2) {
+                badge.className = 'text-xs font-bold px-2.5 py-1 rounded-full bg-neutral-200 text-neutral-800';
+                badge.textContent = 'Perlu Template Awal';
+            } else if (checkedCount <= 4) {
+                badge.className = 'text-xs font-bold px-2.5 py-1 rounded-full bg-yellow-200 text-yellow-900';
+                badge.textContent = 'Siap Digitalisasi';
             } else {
-                answer.classList.add('hidden');
-                symbol.textContent = '+';
+                badge.className = 'text-xs font-bold px-2.5 py-1 rounded-full bg-lime-400 text-neutral-900 border border-neutral-900';
+                badge.textContent = 'Matang untuk Otomasi Penuh';
             }
         }
 
@@ -1024,12 +986,12 @@
             const roomCount = document.getElementById('inputRoomCount').value;
             const dataFormat = document.getElementById('inputDataFormat').value;
 
-            const message = `Halo, saya ingin memesan *Paket Aktivasi & Setup Awal Sistem Informasi Manajemen Rumah Kos — Rp99.000 (Sekali Beli)*.\n\n` +
+            const message = `Halo KosinAja, saya tertarik mengaktifkan *Sistem Informasi Manajemen Rumah Kos (Core Offer)* berdasarkan Paket Template Awal Operasional Kos.\n\n` +
                 `• Nama Kos: ${kosName}\n` +
                 `• Nama Pengelola: ${ownerName}\n` +
                 `• Jumlah Kamar: ${roomCount} Kamar\n` +
-                `• Catatan Saat Ini: ${dataFormat}\n\n` +
-                `Mohon info langkah selanjutnya untuk aktivasi dan pengiriman data awal kamar & penghuni.`;
+                `• Kondisi Catatan Saat Ini: ${dataFormat}\n\n` +
+                `Mohon informasi langkah aktivasi dan konsultasi sistem otomasi dashboard KosinAja.`;
 
             const waNumber = "6285871444639";
             window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(message)}`, '_blank');
@@ -1037,7 +999,10 @@
         }
 
         document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeSetupModal();
+            if (e.key === 'Escape') {
+                closeSetupModal();
+                closeChecklistModal();
+            }
         });
     </script>
 </body>
